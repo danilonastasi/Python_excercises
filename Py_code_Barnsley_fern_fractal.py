@@ -22,9 +22,10 @@ for i in range(npts):
     x, y = f(x,y)
     # Map (x,y) to pixel coordinates.
     # NB we "know" that -2.2 < x < 2.7 and 0 <= y < 10
-    ix, iy = width / 2 + x * width / 10, y * height / 12
-    # Set this point of the array to 1 to mark a point in the fern
-    aimg[iy, ix] = 1
+    
+ix, iy = width / 2 + x * width / 10, y * height / 12
+# Set this point of the array to 1 to mark a point in the fern
+aimg[iy, ix] = 1
     
 plt.imshow(aimg[::-1,:], cmap=cm.Greens)
 plt.show()
